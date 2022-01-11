@@ -1,0 +1,284 @@
+@import "_mixin.scss";
+*{
+    @include espacios(0, 0);
+}
+body {
+    background-image: url("../marmol.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    @include tamaño (100%, 100%);
+}
+@import "_header.scss";
+@import "_main.scss";
+@import "_servicios.scss";
+@import "_footer.scss";
+@media screen and (max-width: 1100px){
+    *{
+        @include espacios(0, 0);
+    }
+    body {
+        background-image: url("../marmol.jpg");
+        background-repeat: no-repeat;
+        background-size: auto;
+        @include tamaño (100%, 100%);
+    }
+    @import "_header.scss";
+    @import "_maps.scss";
+    main{
+        h2 {
+            font-family: "Dancing Script", cursive;
+            font-size: 30px;
+            @include espacios(15px, 4px);
+            text-align: center;
+        }
+        img{
+            @include tamaño (100%, 300px);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        @import "_mixin.scss";
+        h4{
+            @include flex(center, 'Playfair Display' serif, 30px, 15px, 4px, bold); 
+        }
+        form{
+            background-color: map-get($map: $bkcolor, $key: blanco );
+            @include espacios(auto, 30px);
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            border: map-get($map: $bkcolor, $key: negro ) solid 2px;
+            div{font-family: 'Playfair Display', serif;
+                margin-top: 10px;
+                padding: 5px;
+                div{
+                    margin: 15px;
+                }
+                div{
+                    display: flex;
+                    justify-content: right;
+                    padding: 5px; 
+                }
+            }
+            div{
+                input{
+                    &:hover{
+                        background-color: map-get($map: $bkcolor, $key: rosa );
+                    border-radius: 5px; 
+                    }
+                }
+            }
+        }
+        .form2{
+            background-color: map-get($map: $bkcolor, $key: blanco );
+            @include espacios(auto, 30px);
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            div{font-family: 'Playfair Display', serif;
+                margin-top: 10px;
+                padding: 5px;
+                div{
+                    margin: 15px;
+                }
+                div{
+                    display: flex;
+                    justify-content: right;
+                    padding: 5px; 
+                }
+            }
+            div{
+                input{
+                    &:hover{
+                        background-color: map-get($map: $bkcolor, $key: rosa );
+                    border-radius: 5px; 
+                    }
+                }
+            }
+        }
+    }  
+    .main-serv{
+        #grilla{
+        @include tamaño (100%, 100);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(3, 300px);
+        gap: 50px;
+        margin: 70px auto;
+            .box{
+            @include tamaño (100%, 100%);
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            margin: 30px;
+                .img1{
+                    @include tamaño (100%, 100%);
+                    object-fit: cover;
+                    border-radius: 15px;
+                    margin-top: 0;
+                }
+            }
+            .box .hover{
+                @include tamaño (0%, 100%);
+                background-color: rgba(255, 136, 191, 0.809);
+                position: absolute;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                transition: 1.5s all;
+                border-radius: 15px;
+            }
+            .hover h1 p{
+                color: black;
+                font-family: 'Playfair Display', serif;
+                text-shadow: 1px 1px 1px black;
+                font-size: 2em;
+                text-transform: uppercase;
+            }
+            .box:hover .hover{
+                width: 100%;
+            }
+        }
+
+    }    
+    @media screen and (max-width: 700px){
+        *{
+            @include espacios(0, 0);
+        }
+        body {
+            background-image: url("../marmol.jpg");
+            background-repeat: repeat;
+            background-size: auto;
+            @include tamaño (100%, 100%);
+        }
+        @import "_header.scss";
+        @import "_maps.scss";
+        main{
+            h2 {
+                font-family: "Dancing Script", cursive;
+                font-size: 30px;
+                @include espacios(15px, 4px);
+                text-align: center;
+            }
+            img{
+                @include tamaño (100%, 300px);
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            @import "_mixin.scss";
+            h4{
+                @include flex(center, 'Playfair Display' serif, 30px, 15px, 4px, bold); 
+            }
+            form{
+                background-color: map-get($map: $bkcolor, $key: blanco );
+                @include espacios(auto, 30px);
+                width: 100%;
+                max-width: 400px;
+                border-radius: 10px;
+                border: map-get($map: $bkcolor, $key: negro ) solid 2px;
+                div{font-family: 'Playfair Display', serif;
+                    margin-top: 10px;
+                    padding: 5px;
+                    div{
+                        margin: 15px;
+                    }
+                    div{
+                        display: flex;
+                        justify-content: right;
+                        padding: 5px; 
+                    }
+                }
+                div{
+                    input{
+                        &:hover{
+                            background-color: map-get($map: $bkcolor, $key: rosa );
+                        border-radius: 5px; 
+                        }
+                    }
+                }
+            }
+            .form2{
+                background-color: map-get($map: $bkcolor, $key: blanco );
+                @include espacios(auto, 30px);
+                width: 100%;
+                max-width: 400px;
+                border-radius: 10px;
+                div{font-family: 'Playfair Display', serif;
+                    margin-top: 10px;
+                    padding: 5px;
+                    div{
+                        margin: 15px;
+                    }
+                    div{
+                        display: flex;
+                        justify-content: right;
+                        padding: 5px; 
+                    }
+                }
+                div{
+                    input{
+                        &:hover{
+                            background-color: map-get($map: $bkcolor, $key: rosa );
+                        border-radius: 5px; 
+                        }
+                    }
+                }
+            }
+        }  
+        .main-serv{
+            #grilla{
+            @include tamaño (100%, 100);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(1, 300px);
+            grid-template-rows: repeat(1, 300px);
+            gap: 50px;
+            margin: 70px auto;
+                .box{
+                @include tamaño (100%, 100%);
+                text-align: center;
+                overflow: hidden;
+                position: relative;
+                margin: 30px;
+                    .img1{
+                        @include tamaño (100%, 100%);
+                        object-fit: cover;
+                        border-radius: 15px;
+                        margin-top: 0;
+                    }
+                }
+                .box .hover{
+                    @include tamaño (0%, 100%);
+                    background-color: rgba(255, 136, 191, 0.809);
+                    position: absolute;
+                    top: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                    transition: 1.5s all;
+                    border-radius: 15px;
+                }
+                .hover h1 p{
+                    color: black;
+                    font-family: 'Playfair Display', serif;
+                    text-shadow: 1px 1px 1px black;
+                    font-size: 2em;
+                    text-transform: uppercase;
+                }
+                .box:hover .hover{
+                    width: 100%;
+                }
+            }
+    
+        }    
+        @import "_footer.scss";
+    }
+    @import "_footer.scss";
+}
